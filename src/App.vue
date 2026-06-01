@@ -208,6 +208,7 @@ const banners = [
   'Des finitions haut de gamme pour votre maison',
   'Un artisan de confiance à votre service',
   'Rénovation & décoration sur mesure',
+  'EN CE MOMENT -15% SUR TOUT LE PAPIER PEINT !!!',
 ]
 
 const currentBanner = ref(0)
@@ -222,6 +223,7 @@ onMounted(() => {
     currentBackground.value = (currentBackground.value + 1) % backgroundImages.length
   }, 7000)
 })
+
 const reviews = [
   {
     author: 'Bruno DUPUIS',

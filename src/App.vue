@@ -233,7 +233,7 @@ const reviews = [
   {
     author: 'Léonie D',
     rating: 5,
-    text: 'Travail impeccable, très propre et professionnel. Je recommande vivement. PEUT-ETRE A JEUDI POUR LES GRILLADES',
+    text: 'Travail impeccable, très propre et professionnel. Je recommande vivement.',
   },
   {
     author: 'Marie D.',

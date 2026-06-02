@@ -28,7 +28,10 @@
         <a href="#services">Prestations</a>
         <a href="#gallery">Réalisations</a>
         <a href="#about">À propos</a>
+        <a href="#devis">Devis</a>
         <a href="#contact">Contact</a>
+        <a href="#map">Nous trouver</a>
+        <a href="#avis">Avis clients</a>
       </nav>
     </header>
 
@@ -109,7 +112,7 @@
         </div>
       </div>
     </section>
-    <section class="section reviews-section" id="reviews">
+    <section class="section reviews-section" id="avis">
       <h2>Avis clients</h2>
 
       <div class="reviews-grid">
@@ -127,7 +130,7 @@
     </section>
 
     <!-- CONTACT / DEVIS -->
-    <section class="section contact-section" id="contact">
+    <section class="section contact-section" id="devis">
       <h2>Demande de devis</h2>
 
       <form
@@ -171,6 +174,31 @@
 
         <button type="submit" class="contact-button">Envoyer la demande</button>
       </form>
+    </section>
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <h2>Contact</h2>
+
+      <div class="contact-card">
+        <p><strong>Téléphone :</strong> 06 80 60 15 03</p>
+        <p><strong>Email :</strong> contact@artisan-peintre.fr</p>
+        <p><strong>Zone d’intervention :</strong> Landes et alentours</p>
+      </div>
+    </section>
+    <!-- MAP -->
+    <section class="map-section" id="map">
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps?q=138+Rue+Rectoure,+40990+Saint-Vincent-de-Paul&output=embed"
+          width="100%"
+          height="350"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
     </section>
     <!-- FOOTER -->
     <footer class="footer">

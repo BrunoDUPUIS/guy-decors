@@ -132,7 +132,7 @@
 
       <form
         class="contact-card"
-        action="https://formsubmit.co/b-d.dupuis@laposte.net"
+        action="https://formsubmit.co/28208876c82fb70f2e69c8472d5cdd91"
         method="POST"
       >
         <!-- Anti-spam -->

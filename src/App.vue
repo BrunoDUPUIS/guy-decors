@@ -125,31 +125,52 @@
         </div>
       </div>
     </section>
-    <!-- CONTACT -->
+
+    <!-- CONTACT / DEVIS -->
     <section class="section contact-section" id="contact">
-      <h2>Contact</h2>
+      <h2>Demande de devis</h2>
 
-      <div class="contact-card">
-        <p><strong>Téléphone :</strong> 06 80 60 15 03</p>
-        <p><strong>Email :</strong> contact@artisan-peintre.fr</p>
-        <p><strong>Zone d’intervention :</strong> Landes et alentours</p>
+      <form
+        class="contact-card"
+        action="https://formsubmit.co/b-d.dupuis@laposte.net"
+        method="POST"
+      >
+        <!-- Anti-spam -->
+        <input type="hidden" name="_captcha" value="false" />
 
-        <button class="contact-button">Demander un devis</button>
-      </div>
-    </section>
-    <section class="map-section">
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps?q=138+Rue+Rectoure,+40990+Saint-Vincent-de-Paul&output=embed"
-          width="100%"
-          height="350"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        >
-        </iframe>
-      </div>
+        <!-- Sujet -->
+        <input type="hidden" name="_subject" value="Nouvelle demande de devis depuis le site" />
+
+        <!-- Redirection après envoi -->
+        <input
+          type="hidden"
+          name="_next"
+          value="https://joyful-snickerdoodle-87eb83.netlify.app/"
+        />
+
+        <div class="form-group">
+          <input type="text" name="Nom" placeholder="Votre nom" required />
+        </div>
+
+        <div class="form-group">
+          <input type="email" name="Email" placeholder="Votre email" required />
+        </div>
+
+        <div class="form-group">
+          <input type="tel" name="Téléphone" placeholder="Votre téléphone" />
+        </div>
+
+        <div class="form-group">
+          <textarea
+            name="Message"
+            rows="6"
+            placeholder="Décrivez votre projet..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="contact-button">Envoyer la demande</button>
+      </form>
     </section>
     <!-- FOOTER -->
     <footer class="footer">
@@ -826,5 +847,49 @@ body {
 .review-author {
   font-weight: bold;
   opacity: 0.8;
+}
+/* =========================
+   FORMULAIRE
+========================= */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  padding: 16px 20px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: white;
+  font-size: 1rem;
+
+  backdrop-filter: blur(5px);
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.01);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
 }
 </style>

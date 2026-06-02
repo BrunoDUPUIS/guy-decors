@@ -48,7 +48,7 @@
 
         <p class="subtitle">Artisan peintre – Travaux intérieurs & extérieurs</p>
 
-        <a href="#contact" class="cta-button"> Demander un devis gratuit </a>
+        <a href="#devis" class="cta-button"> Demander un devis gratuit </a>
       </div>
     </section>
 

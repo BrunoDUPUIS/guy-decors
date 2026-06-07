@@ -1,0 +1,38 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: 'public/images'
+public_folder: '/images'
+
+collections:
+  - name: 'site'
+    label: 'Site'
+    files:
+      - label: 'Informations'
+        name: 'infos'
+        file: 'public/data/site.json'
+
+        fields:
+          - { label: 'Nom entreprise', name: 'nomEntreprise', widget: 'string' }
+
+          - { label: 'Téléphone', name: 'telephone', widget: 'string' }
+
+          - { label: 'Email', name: 'email', widget: 'string' }
+
+          - { label: 'Adresse', name: 'adresse', widget: 'text' }
+
+          - { label: 'Bandeau', name: 'bandeau', widget: 'text' }
+
+          - label: 'Services'
+            name: 'services'
+            widget: 'list'
+
+          - label: 'Avis'
+            name: 'avis'
+            widget: 'list'
+
+            fields:
+              - { label: 'Prénom', name: 'prenom', widget: 'string' }
+
+              - { label: 'Avis', name: 'texte', widget: 'text' }

@@ -65,28 +65,28 @@ onMounted(() => {
   }, 7000)
 })
 
-const reviews = [
-  {
-    author: 'Bruno DUPUIS',
-    rating: 5,
-    text: 'PEUT-ETRE A JEUDI POUR LES GRILLADES !!! ',
-  },
-  {
-    author: 'Léonie D',
-    rating: 5,
-    text: 'Travail impeccable, très propre et professionnel. Je recommande vivement.',
-  },
-  {
-    author: 'Marie D.',
-    rating: 5,
-    text: 'Très bon artisan, ponctuel et sérieux. Excellent résultat.',
-  },
-  {
-    author: 'Jean P.',
-    rating: 4,
-    text: 'Bon travail, finition soignée, délais respectés.',
-  },
-]
+// const reviews = [
+//   {
+//     author: 'Bruno DUPUIS',
+//     rating: 5,
+//     text: 'PEUT-ETRE A JEUDI POUR LES GRILLADES !!! ',
+//   },
+//   {
+//     author: 'Léonie D',
+//     rating: 5,
+//     text: 'Travail impeccable, très propre et professionnel. Je recommande vivement.',
+//   },
+//   {
+//     author: 'Marie D.',
+//     rating: 5,
+//     text: 'Très bon artisan, ponctuel et sérieux. Excellent résultat.',
+//   },
+//   {
+//     author: 'Jean P.',
+//     rating: 4,
+//     text: 'Bon travail, finition soignée, délais respectés.',
+//   },
+// ]
 </script>
 
 <template>

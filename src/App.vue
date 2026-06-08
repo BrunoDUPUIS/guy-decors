@@ -1,94 +1,3 @@
-<script setup>
-import { ref, onMounted } from 'vue'
-import siteData from './content/site.json'
-
-/*
-  ===================================================
-  IMAGES À AJOUTER DANS /public/images/
-  ===================================================
-
-  logo.png
-  about.jpg
-
-  bg1.jpg
-  bg2.jpg
-  bg3.jpg
-  bg4.jpg
-
-  real1.jpg
-  real2.jpg
-  real3.jpg
-  real4.jpg
-  real5.jpg
-  real6.jpg
-
-  ===================================================
-*/
-const menuOpen = ref(false)
-const backgroundImages = [
-  '/images/about.jpg',
-  '/images/real1.jpg',
-  '/images/real2.jpg',
-  '/images/real3.jpg',
-]
-
-const galleryImages = [
-  '/images/real1.jpg',
-  '/images/real2.jpg',
-  '/images/about.jpg',
-  '/images/real4.webp',
-  '/images/real5.webp',
-  '/images/real6.webp',
-]
-
-/*
-  BANNIÈRE MODIFIABLE
-*/
-const banners = [
-  'Travaux de peinture intérieure et extérieure',
-  'Des finitions haut de gamme pour votre maison',
-  'Un artisan de confiance à votre service',
-  'Rénovation & décoration sur mesure',
-  'EN CE MOMENT -15% SUR TOUT LE PAPIER PEINT !!!',
-]
-
-const currentBanner = ref(0)
-const currentBackground = ref(0)
-
-onMounted(() => {
-  setInterval(() => {
-    currentBanner.value = (currentBanner.value + 1) % banners.length
-  }, 4000)
-
-  setInterval(() => {
-    currentBackground.value = (currentBackground.value + 1) % backgroundImages.length
-  }, 7000)
-})
-
-// const reviews = [
-//   {
-//     author: 'Bruno DUPUIS',
-//     rating: 5,
-//     text: 'PEUT-ETRE A JEUDI POUR LES GRILLADES !!! ',
-//   },
-//   {
-//     author: 'Léonie D',
-//     rating: 5,
-//     text: 'Travail impeccable, très propre et professionnel. Je recommande vivement.',
-//   },
-//   {
-//     author: 'Marie D.',
-//     rating: 5,
-//     text: 'Très bon artisan, ponctuel et sérieux. Excellent résultat.',
-//   },
-//   {
-//     author: 'Jean P.',
-//     rating: 4,
-//     text: 'Bon travail, finition soignée, délais respectés.',
-//   },
-// ]
-</script>
-
 <template>
   <div id="app">
     <!-- BACKGROUND SLIDER -->
@@ -129,21 +38,17 @@ onMounted(() => {
     <!-- BANNER -->
     <section class="hero" id="home">
       <div class="hero-overlay">
-        <!-- H1 SEO -->
-        <h1>{{ siteData.heroTitle }}</h1>
-
-        <!-- Texte déroulant -->
         <div class="hero-slider">
           <transition name="fade" mode="out-in">
-            <h2 :key="currentBanner">
+            <h1 :key="currentBanner">
               {{ banners[currentBanner] }}
-            </h2>
+            </h1>
           </transition>
         </div>
 
-        <p class="subtitle">Travaux de peinture intérieure & extérieure</p>
+        <p class="subtitle">Artisan peintre – Travaux intérieurs & extérieurs</p>
 
-        <a href="#contact" class="cta-button"> Demander un devis gratuit </a>
+        <a href="#devis" class="cta-button"> Demander un devis gratuit </a>
       </div>
     </section>
 
@@ -301,6 +206,96 @@ onMounted(() => {
     </footer>
   </div>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+
+/*
+  ===================================================
+  IMAGES À AJOUTER DANS /public/images/
+  ===================================================
+
+  logo.png
+  about.jpg
+
+  bg1.jpg
+  bg2.jpg
+  bg3.jpg
+  bg4.jpg
+
+  real1.jpg
+  real2.jpg
+  real3.jpg
+  real4.jpg
+  real5.jpg
+  real6.jpg
+
+  ===================================================
+*/
+const menuOpen = ref(false)
+const backgroundImages = [
+  '/images/about.jpg',
+  '/images/real1.jpg',
+  '/images/real2.jpg',
+  '/images/real3.jpg',
+]
+
+const galleryImages = [
+  '/images/real1.jpg',
+  '/images/real2.jpg',
+  '/images/about.jpg',
+  '/images/real4.webp',
+  '/images/real5.webp',
+  '/images/real6.webp',
+]
+
+/*
+  BANNIÈRE MODIFIABLE
+*/
+const banners = [
+  'Travaux de peinture intérieure et extérieure',
+  'Des finitions haut de gamme pour votre maison',
+  'Un artisan de confiance à votre service',
+  'Rénovation & décoration sur mesure',
+  'EN CE MOMENT -15% SUR TOUT LE PAPIER PEINT !!!',
+]
+
+const currentBanner = ref(0)
+const currentBackground = ref(0)
+
+onMounted(() => {
+  setInterval(() => {
+    currentBanner.value = (currentBanner.value + 1) % banners.length
+  }, 4000)
+
+  setInterval(() => {
+    currentBackground.value = (currentBackground.value + 1) % backgroundImages.length
+  }, 7000)
+})
+
+const reviews = [
+  {
+    author: 'Bruno DUPUIS',
+    rating: 5,
+    text: 'PEUT-ETRE A JEUDI POUR LES GRILLADES !!! ',
+  },
+  {
+    author: 'Léonie D',
+    rating: 5,
+    text: 'Travail impeccable, très propre et professionnel. Je recommande vivement.',
+  },
+  {
+    author: 'Marie D.',
+    rating: 5,
+    text: 'Très bon artisan, ponctuel et sérieux. Excellent résultat.',
+  },
+  {
+    author: 'Jean P.',
+    rating: 4,
+    text: 'Bon travail, finition soignée, délais respectés.',
+  },
+]
+</script>
 
 <style>
 * {

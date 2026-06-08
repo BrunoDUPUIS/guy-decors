@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://joyful-snickerdoodle-87eb83.netlify.app/sitemap.xml

@@ -38,17 +38,21 @@
     <!-- BANNER -->
     <section class="hero" id="home">
       <div class="hero-overlay">
+        <!-- H1 SEO -->
+        <h1>{{ siteData.heroTitle }}</h1>
+
+        <!-- Texte déroulant -->
         <div class="hero-slider">
           <transition name="fade" mode="out-in">
-            <h1 :key="currentBanner">
+            <h2 :key="currentBanner">
               {{ banners[currentBanner] }}
-            </h1>
+            </h2>
           </transition>
         </div>
 
-        <p class="subtitle">Artisan peintre – Travaux intérieurs & extérieurs</p>
+        <p class="subtitle">Travaux de peinture intérieure & extérieure</p>
 
-        <a href="#devis" class="cta-button"> Demander un devis gratuit </a>
+        <a href="#contact" class="cta-button"> Demander un devis gratuit </a>
       </div>
     </section>
 
@@ -209,6 +213,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import siteData from '../content/site.json'
 
 /*
   ===================================================
